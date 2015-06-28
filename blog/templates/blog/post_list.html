@@ -6,8 +6,14 @@
 	<div>
             <h1><a href="">Footie_blog</a></h1>
     </div>
-	<div>
-            <img src="gunnersaurus.jpg" alt="Gunnersaurus">
-            
-        </div>
+	{% for post in posts %}
+	   <div>
+	        <p>published: {{post.published_date }}</p>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaks }}</p>
+		</div>
+		
+	{% endfor %}
+<img src="http://www.arsenal.com/assets/_files/scaled/696x392/jan_13/gun__1358268193_gunnersaurus1.jpg" alt="gunnersaurus">
+</body>	
 </html>
